@@ -1,4 +1,5 @@
 import Stripe from 'stripe';
+import Product from '@/app/components/Product';
 
 const getProducts = async () => {
   const stripe = new Stripe(process.env.STRIPE_SECRET as string, {
@@ -26,10 +27,16 @@ const getProducts = async () => {
 export default async function Home() {
   const products = await getProducts();
 
-  console.log(products);
   return (
     <main>
-      <div>Hello!</div>
+      {products.map((product) => (
+        <Product
+          key={product.id}
+          name={product.name}
+          image={product.image}
+          price={product.price}
+        />
+      ))}
     </main>
   );
 }

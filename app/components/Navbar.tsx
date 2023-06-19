@@ -2,8 +2,13 @@
 
 import { signIn } from 'next-auth/react';
 import Image from 'next/image';
+import { Session } from 'next-auth';
 
-export default function NavBar({ session }) {
+type PageProps = {
+  session: Session | null;
+};
+
+export default function NavBar({ session }: PageProps) {
   return (
     <nav className="flex items-center justify-between py-8">
       <h1>NavBar</h1>
