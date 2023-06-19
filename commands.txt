@@ -1,3 +1,5 @@
 npm install prisma ts-node @prisma/client
 npx prisma init
 npx prisma migrate dev
+
+npm install next-auth @auth/prisma-adapter
