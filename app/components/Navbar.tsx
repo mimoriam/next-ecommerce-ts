@@ -23,6 +23,7 @@ export default function NavBar({ session }) {
                 height={48}
                 width={48}
                 className="rounded-full"
+                priority={true}
               />
             </li>
             <li>Dashboard</li>

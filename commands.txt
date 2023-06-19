@@ -4,4 +4,4 @@ npx prisma migrate dev
 
 npm install next-auth @auth/prisma-adapter
 
-npm i stripe
+npm i stripe @stripe/stripe-js
