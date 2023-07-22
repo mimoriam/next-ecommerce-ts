@@ -15,7 +15,7 @@ export default function Product({ name, image, price }: ProductType) {
       />
       <div className="py-2 font-medium">
         <h1>{name}</h1>
-        <h2 className="text-primary text-sm">{formatPrice(price)}</h2>
+        <h2 className="text-primary text-sm">{formatPrice(price as number)}</h2>
       </div>
     </div>
   );
